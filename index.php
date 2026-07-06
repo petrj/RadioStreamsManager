@@ -3,23 +3,14 @@
 
 $default_stations = [
     [
-        'name' => 'ČRo 1 - Radiožurnál',
-        'streams' => [
-            ['name' => 'MP3 128k', 'url' => 'http://icecast8.play.cz:8000/cro1-128.mp3', 'mime' => 'audio/mpeg'],
-            ['name' => 'OGG High', 'url' => 'http://amp.cesnet.cz:8000/cro1.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/cro1-256.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'Z-OGG High', 'url' => 'http://amp.cesnet.cz:8000/z-cro1.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'Z-OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/z-cro1-256.ogg', 'mime' => 'audio/ogg']
-        ]
-    ],
-    [
         'name' => 'Radio Plus',
-        'streams' => [        
-            ['name' => 'Default MP3', 'url' => 'https://rozhlas.stream/plus_mp3_128.mp3', 'mime' => 'audio/mp3'],        
-            ['name' => 'OGG Stream', 'url' => 'http://amp.cesnet.cz:8000/cro-plus.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/cro-plus-256.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'Z-OGG Stream', 'url' => 'http://amp.cesnet.cz:8000/z-cro-plus.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'Z-OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/z-cro-plus-256.ogg', 'mime' => 'audio/ogg']
+        'streams' => [
+            ['name' => 'AAC 176', 'url' => 'https://rozhlas.stream/plus_high.aac', 'mime' => 'audio/aac'],
+            ['name' => 'MP3 128', 'url' => 'https://rozhlas.stream/plus_mp3_128.mp3', 'mime' => 'audio/mp3'],
+            ['name' => 'OGG Stream', 'url' => 'https://amp.cesnet.cz:8442/cro-plus.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG 256k', 'url' => 'https://amp.cesnet.cz:8443/cro-plus-256.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG Stream', 'url' => 'https://amp.cesnet.cz:8443/z-cro-plus.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG 256k', 'url' => 'https://amp.cesnet.cz:8443/z-cro-plus-256.ogg', 'mime' => 'audio/ogg']
         ]
     ],
     [
@@ -27,19 +18,31 @@ $default_stations = [
         'streams' => [
             ['name' => 'Default', 'url' => 'https://stream.rcs.revma.com/3d47nqvb938uv', 'mime' => 'audio/mpeg'],
             ['name' => 'Default 2', 'url' => 'https://icecast2.play.cz/radiobeat128.mp3', 'mime' => 'audio/mpeg']
-            
-        ]
-    ],    
-    [
-        'name' => 'Rock Rádio',
-        'streams' => [
-            ['name' => 'Default MP3', 'url' => 'http://ice.abradio.cz/sumava128.mp3', 'mime' => 'audio/mpeg']
+
         ]
     ],
     [
         'name' => 'Rádio Impuls',
         'streams' => [
-            ['name' => 'Default MP3', 'url' => 'http://icecast1.play.cz/impuls128.mp3', 'mime' => 'audio/mpeg']
+            ['name' => 'Default MP3', 'url' => 'https://icecast1.play.cz/impuls128.mp3', 'mime' => 'audio/mpeg']
+        ]
+    ],
+    [
+        'name' => 'ČRo 1 - Radiožurnál',
+        'streams' => [
+            ['name' => 'AAC 192', 'url' => 'https://icecast1.play.cz/cro1128aac', 'mime' => 'audio/aac'],
+            ['name' => 'MP3 128', 'url' => 'https://icecast7.play.cz/cro1-128.mp3', 'mime' => 'audio/mp3'],
+            ['name' => 'MP3 128k', 'url' => 'https://icecast8.play.cz:8443/cro1-128.mp3', 'mime' => 'audio/mpeg'],
+            ['name' => 'OGG High', 'url' => 'https://amp.cesnet.cz:8443/cro1.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG 256k', 'url' => 'https://amp.cesnet.cz:8443/cro1-256.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG High', 'url' => 'https://amp.cesnet.cz:8443/z-cro1.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG 256k', 'url' => 'https://amp.cesnet.cz:8443/z-cro1-256.ogg', 'mime' => 'audio/ogg']
+        ]
+    ],
+    [
+        'name' => 'Rock Rádio',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'https://ice.abradio.cz/sumava128.mp3', 'mime' => 'audio/mpeg']
         ]
     ],
     [
@@ -53,7 +56,7 @@ $default_stations = [
         'streams' => [
             ['name' => 'Default', 'url' => 'https://ice.actve.net/fm-bonton-320', 'mime' => 'audio/mpeg']
         ]
-    ],                        
+    ],
     [
         'name' => 'Evropa 2',
         'streams' => [
@@ -71,35 +74,36 @@ $default_stations = [
         'streams' => [
             ['name' => 'Default MP3', 'url' => 'https://icecast6.play.cz/casradio128.mp3', 'mime' => 'audio/mpeg']
         ]
-    ],    
+    ],
     [
         'name' => 'Rozk Zone',
         'streams' => [
             ['name' => 'Default MP3', 'url' => 'https://icecast5.play.cz/rockzone128.mp3', 'mime' => 'audio/mpeg']
         ]
-    ],    
+    ],
     [
         'name' => 'Color Music Radio',
         'streams' => [
             ['name' => 'Default MP3', 'url' => 'https://icecast6.play.cz/color192.mp3', 'mime' => 'audio/mpeg']
         ]
-    ],    
+    ],
     [
         'name' => 'Radio 1',
         'streams' => [
             ['name' => 'Default', 'url' => 'https://live.radio1.pf:8443/radio1', 'mime' => 'audio/mpeg']
         ]
-    ],            
+    ],
     [
         'name' => 'Blaník',
         'streams' => [
-            ['name' => 'Default MP3', 'url' => 'http://ice.abradio.cz/blanikfm128.mp3', 'mime' => 'audio/mpeg']
+            ['name' => 'Default MP3', 'url' => 'https://21633.live.streamtheworld.com/RADIO_BLANIKCZ_128.mp3', 'mime' => 'audio/mpeg']
         ]
     ],
     [
         'name' => 'Humor',
         'streams' => [
-            ['name' => 'Default MP3', 'url' => 'http://mp3stream4.abradio.cz/humor128.mp3', 'mime' => 'audio/mpeg']
+            ['name' => 'Default MP3', 'url' => 'https://29083.live.streamtheworld.com/RADIO_HUMOR_128.mp3', 'mime' => 'audio/mpeg'],
+            ['name' => 'Default MP3 2', 'url' => 'https://mp3stream4.abradio.cz/humor128.mp3', 'mime' => 'audio/mpeg']
         ]
     ],
     [
@@ -125,71 +129,82 @@ $default_stations = [
         'streams' => [
             ['name' => 'Default MP3', 'url' => 'https://icecast7.play.cz/relax128.mp3', 'mime' => 'audio/mpeg']
         ]
-    ],                                                                        
+    ],
     [
         'name' => 'Rádio Regina BB',
         'streams' => [
-            ['name' => 'Default MP3', 'url' => 'http://live.slovakradio.sk:8000/Regina_BB_128.mp3', 'mime' => 'audio/mpeg']
+            ['name' => 'Default MP3', 'url' => 'https://live.slovakradio.sk:8443/Regina_BB_128.mp3', 'mime' => 'audio/mpeg']
         ]
     ],
     [
         'name' => 'ČRo 2 - Praha',
         'streams' => [
-            ['name' => 'Default MP3', 'url' => 'http://icecast7.play.cz:8000/cro2-128.mp3', 'mime' => 'audio/mpeg'],
-            ['name' => 'OGG High', 'url' => 'http://amp.cesnet.cz:8000/cro2.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/cro2-256.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'Z-OGG High', 'url' => 'http://amp.cesnet.cz:8000/z-cro2.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'Z-OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/z-cro2-256.ogg', 'mime' => 'audio/ogg']
+            ['name' => 'Default MP3', 'url' => 'https://icecast6.play.cz/cro2-128.mp3', 'mime' => 'audio/mpeg'],
+            ['name' => 'Default MP3 2', 'url' => 'https://icecast7.play.cz:8443/cro2-128.mp3', 'mime' => 'audio/mpeg'],
+            ['name' => 'OGG High', 'url' => 'https://amp.cesnet.cz:8443/cro2.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG 256k', 'url' => 'https://amp.cesnet.cz:8443/cro2-256.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG High', 'url' => 'https://amp.cesnet.cz:8443/z-cro2.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG 256k', 'url' => 'https://amp.cesnet.cz:8443/z-cro2-256.ogg', 'mime' => 'audio/ogg']
         ]
     ],
     [
         'name' => 'ČRo 3 - Vltava',
         'streams' => [
-            ['name' => 'Default OGG', 'url' => 'http://amp.cesnet.cz:8000/z-cro3.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'OGG High', 'url' => 'http://amp.cesnet.cz:8000/cro3.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/cro3-256.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'FLAC Stream', 'url' => 'http://amp.cesnet.cz:8000/cro3.flac', 'mime' => 'audio/ogg'], // HTML specifikuje type="application/ogg"
-            ['name' => 'Z-OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/z-cro3-256.ogg', 'mime' => 'audio/ogg']
+            ['name' => 'Default MP3', 'url' => 'https://icecast5.play.cz/cro3-128.mp3', 'mime' => 'audio/ogg'],
+            ['name' => 'Default OGG', 'url' => 'https://amp.cesnet.cz:8443/z-cro3.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG High', 'url' => 'https://amp.cesnet.cz:8443/cro3.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG 256k', 'url' => 'https://amp.cesnet.cz:8443/cro3-256.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'FLAC Stream', 'url' => 'https://amp.cesnet.cz:8443/cro3.flac', 'mime' => 'audio/ogg'], // HTML specifikuje type="application/ogg"
+            ['name' => 'Z-OGG 256k', 'url' => 'https://amp.cesnet.cz:8443/z-cro3-256.ogg', 'mime' => 'audio/ogg']
         ]
-    ],    
+    ],
     [
         'name' => 'ČRo Radio Wave',
         'streams' => [
             ['name' => 'Default MP3', 'url' => 'https://rozhlas.stream/wave_mp3_128.mp3', 'mime' => 'audio/mpeg'],
-            ['name' => 'OGG High', 'url' => 'http://amp.cesnet.cz:8000/cro-radio-wave.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/cro-radio-wave-256.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'FLAC Stream', 'url' => 'http://amp.cesnet.cz:8000/cro-radio-wave.flac', 'mime' => 'audio/ogg'],
-            ['name' => 'Z-OGG High', 'url' => 'http://amp.cesnet.cz:8000/z-cro-radio-wave.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'Z-OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/z-cro-radio-wave-256.ogg', 'mime' => 'audio/ogg']
+            ['name' => 'OGG High', 'url' => 'https://amp.cesnet.cz:8443/cro-radio-wave.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG 256k', 'url' => 'https://amp.cesnet.cz:8443/cro-radio-wave-256.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'FLAC Stream', 'url' => 'https://amp.cesnet.cz:8443/cro-radio-wave.flac', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG High', 'url' => 'https://amp.cesnet.cz:8443/z-cro-radio-wave.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG 256k', 'url' => 'https://amp.cesnet.cz:8443/z-cro-radio-wave-256.ogg', 'mime' => 'audio/ogg']
         ]
     ],
     [
         'name' => 'ČRo Radio Junior',
         'streams' => [
-            ['name' => 'Default OGG', 'url' => 'http://amp.cesnet.cz:8000/z-cro-radio-junior.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'OGG High', 'url' => 'http://amp.cesnet.cz:8000/cro-radio-junior.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/cro-radio-junior-256.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'Z-OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/z-cro-radio-junior-256.ogg', 'mime' => 'audio/ogg']
+            ['name' => 'Default mp3', 'url' => 'https://rozhlas.stream/radio_junior.mp3', 'mime' => 'audio/mp3'],
+            ['name' => 'Default OGG', 'url' => 'https://amp.cesnet.cz:8443/z-cro-radio-junior.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG High', 'url' => 'https://amp.cesnet.cz:8443/cro-radio-junior.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG 256k', 'url' => 'https://amp.cesnet.cz:8443/cro-radio-junior-256.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG 256k', 'url' => 'https://amp.cesnet.cz:8443/z-cro-radio-junior-256.ogg', 'mime' => 'audio/ogg']
         ]
     ],
     [
         'name' => 'ČRo Jazz',
         'streams' => [
-            ['name' => 'Default OGG', 'url' => 'http://amp.cesnet.cz:8000/z-cro-jazz.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'OGG High', 'url' => 'http://amp.cesnet.cz:8000/cro-jazz.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/cro-jazz-256.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'FLAC Stream', 'url' => 'http://amp.cesnet.cz:8000/cro-jazz.flac', 'mime' => 'audio/ogg'],
-            ['name' => 'Z-OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/z-cro-jazz-256.ogg', 'mime' => 'audio/ogg']
+            ['name' => 'Default MP3', 'url' => 'https://rozhlas.stream/jazz.mp3', 'mime' => 'audio/mp3'],
+            ['name' => 'Default OGG', 'url' => 'https://amp.cesnet.cz:8443/z-cro-jazz.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG High', 'url' => 'https://amp.cesnet.cz:8443/cro-jazz.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG 256k', 'url' => 'https://amp.cesnet.cz:8443/cro-jazz-256.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'FLAC Stream', 'url' => 'https://amp.cesnet.cz:8443/cro-jazz.flac', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG 256k', 'url' => 'https://amp.cesnet.cz:8443/z-cro-jazz-256.ogg', 'mime' => 'audio/ogg']
         ]
     ],
     [
         'name' => 'ČRo D-dur',
         'streams' => [
-            ['name' => 'Default OGG', 'url' => 'http://amp.cesnet.cz:8000/z-cro-d-dur.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'OGG High', 'url' => 'http://amp.cesnet.cz:8000/cro-d-dur.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/cro-d-dur-256.ogg', 'mime' => 'audio/ogg'],
-            ['name' => 'FLAC Stream', 'url' => 'http://amp.cesnet.cz:8000/cro-d-dur.flac', 'mime' => 'audio/ogg'],
-            ['name' => 'Z-OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/z-cro-d-dur-256.ogg', 'mime' => 'audio/ogg']
+            ['name' => 'Default MP3', 'url' => 'https://rozhlas.stream/ddur.mp3', 'mime' => 'audio/mp3'],
+            ['name' => 'Default OGG', 'url' => 'https://amp.cesnet.cz:8443/z-cro-d-dur.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG High', 'url' => 'https://amp.cesnet.cz:8443/cro-d-dur.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG 256k', 'url' => 'https://amp.cesnet.cz:8443/cro-d-dur-256.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'FLAC Stream', 'url' => 'https://amp.cesnet.cz:8443/cro-d-dur.flac', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG 256k', 'url' => 'https://amp.cesnet.cz:8443/z-cro-d-dur-256.ogg', 'mime' => 'audio/ogg']
+        ]
+    ],
+    [
+        'name' => 'ČRo - Radiožurnál sport',
+        'streams' => [
+            ['name' => 'AAC 192', 'url' => 'https://rozhlas.stream/radiozurnal_sport_high.aac', 'mime' => 'audio/aac']
         ]
     ],
     [
@@ -197,19 +212,19 @@ $default_stations = [
         'streams' => [
             ['name' => 'Default MP3', 'url' => 'https://rozhlas.stream/cro7_mp3_128.mp3', 'mime' => 'audio/mpeg']
         ]
-    ],    
+    ],
     [
         'name' => 'Classic Praha',
         'streams' => [
-            ['name' => 'Default MP3', 'url' => 'http://icecast8.play.cz/classic128.mp3', 'mime' => 'audio/mpeg']
+            ['name' => 'Default MP3', 'url' => 'https://icecast8.play.cz/classic128.mp3', 'mime' => 'audio/mpeg']
         ]
-    ],    
+    ],
     [
         'name' => 'BBW World Service',
         'streams' => [
-            ['name' => 'Default', 'url' => 'http://stream.live.vc.bbcmedia.co.uk/bbc_world_service', 'mime' => 'audio/mpeg']
+            ['name' => 'Default', 'url' => 'https://stream.live.vc.bbcmedia.co.uk/bbc_world_service', 'mime' => 'audio/mpeg']
         ]
-    ]  
+    ]
 ];
 
 
@@ -219,7 +234,7 @@ if (!empty($_GET['url'])) {
     $csv_data = $_GET['url'];
     $lines = preg_split('/\r\n|\r|\n/', trim($csv_data));
     $has_header = false;
-    
+
     foreach ($lines as $line) {
         $row = str_getcsv($line, ',');
         if (empty($row) || count($row) < 2) continue;
@@ -324,7 +339,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'export_xml') {
     exit;
 }
 
-$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "https://";
 $baseUrl = $protocol . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '?');
 ?>
 <!DOCTYPE html>
@@ -379,9 +394,9 @@ $baseUrl = $protocol . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '
         .equalizer-container.playing { display: flex; }
         .eq-bar { width: 3px; height: 3px; background-color: var(--accent-color); border-radius: 1px 1px 0 0; }
 
-        .status-dot { 
-            width: 1rem; height: 1rem; border-radius: 50%; 
-            background: #333333; display: inline-block; 
+        .status-dot {
+            width: 1rem; height: 1rem; border-radius: 50%;
+            background: #333333; display: inline-block;
             box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
             border: 1px solid #2d2d2d; flex-shrink: 0;
         }
@@ -420,12 +435,12 @@ $baseUrl = $protocol . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '
             transition: background 0.2s, color 0.2s; display: inline-flex; align-items: center;
         }
         .copy-url-btn:hover { color: var(--accent-color); background: #2d2d2d; }
-        
-        audio { width: 100%; border-radius: 8px; filter: invert(0.88) hue-rotate(180deg); } 
 
-        .actions-group { 
-            display: flex; gap: 6px; align-items: center; justify-content: flex-end; 
-            margin-top: 12px; margin-bottom: 12px; flex-wrap: wrap; 
+        audio { width: 100%; border-radius: 8px; filter: invert(0.88) hue-rotate(180deg); }
+
+        .actions-group {
+            display: flex; gap: 6px; align-items: center; justify-content: flex-end;
+            margin-top: 12px; margin-bottom: 12px; flex-wrap: wrap;
         }
 
         .icon-btn {
@@ -472,7 +487,7 @@ $baseUrl = $protocol . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '
 <body>
 
 <div class="container">
-    <?php foreach ($stations as $index => $station): 
+    <?php foreach ($stations as $index => $station):
         $primaryStream = $station['streams'][0];
         $streamCount = count($station['streams']);
     ?>
@@ -545,7 +560,7 @@ $baseUrl = $protocol . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '
         <button class="modal-close" onclick="document.getElementById('recordingModal').style.display='none'">×</button>
         <div class="modal-header" id="modalRadioName">Stream Recording</div>
         <p style="font-size:0.8rem; color:#a0a0a0; margin-bottom:15px;">Copy the command and run it in your terminal:</p>
-        
+
         <div class="cmd-section">
             <div class="cmd-label">FFmpeg - Original Quality (Stream Copy)</div>
             <div class="code-box"><button class="copy-btn" onclick="copyCode(this)">Copy</button><code id="cmdFfmpegRaw"></code></div>
@@ -575,7 +590,7 @@ function getSelectedStreamData(index) {
     const selectedOption = selector.options[selector.selectedIndex];
     const stationName = document.getElementById(`station-title-${index}`).innerText;
     const variantName = selectedOption.getAttribute('data-variant-name');
-    
+
     return {
         stationName: stationName,
         fullName: variantName ? `${stationName} (${variantName})` : stationName,
@@ -590,7 +605,7 @@ function switchStreamVariant(index) {
     const source = document.getElementById(`source-${index}`);
     const link = document.getElementById(`link-${index}`);
     const dot = document.getElementById(`status-${index}`);
-    
+
     dot.className = 'status-dot';
     const isCurrentlyPlaying = !player.paused;
     player.pause();
@@ -612,7 +627,7 @@ function startPlayback(index) {
     const data = getSelectedStreamData(index);
     document.querySelectorAll('audio').forEach((audio, i) => { if (i !== index && !audio.paused) audio.pause(); });
     document.title = `▶ Playing ${data.fullName}`;
-    
+
     const container = document.getElementById(`eq-${index}`);
     container.classList.add('playing');
     const bars = container.querySelectorAll('.eq-bar');
@@ -664,7 +679,7 @@ async function checkSelectedStream(index) {
 function openSelectedRecordingModal(index) {
     const data = getSelectedStreamData(index);
     const safeFilename = data.fullName.toLowerCase().replace(/[^a-z0-9]/g, '_') + '_output.mp3';
-    
+
     document.getElementById('modalRadioName').innerText = `Recording: ${data.fullName}`;
     document.getElementById('cmdFfmpegRaw').innerText = `ffmpeg -i "${data.url}" -c copy "${safeFilename}"`;
     document.getElementById('cmdFfmpegCompress').innerText = `ffmpeg -i "${data.url}" -c:a libmp3lame -b:a 64k "${safeFilename}"`;
