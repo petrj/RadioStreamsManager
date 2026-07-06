@@ -24,7 +24,7 @@ $default_stations = [
     [
         'name' => 'Radio Beat',
         'streams' => [
-            ['name' => 'Default MP3', 'url' => 'https://stream.rcs.revma.com/3d47nqvb938uv', 'mime' => 'audio/mpeg']
+            ['name' => 'Default', 'url' => 'https://stream.rcs.revma.com/3d47nqvb938uv', 'mime' => 'audio/mpeg']
         ]
     ],    
     [
@@ -42,19 +42,19 @@ $default_stations = [
     [
         'name' => 'Frekvence 1',
         'streams' => [
-            ['name' => 'Default MP3', 'url' => 'https://ice.actve.net/fm-frekvence1-128', 'mime' => 'audio/mpeg']
+            ['name' => 'Default', 'url' => 'https://ice.actve.net/fm-frekvence1-128', 'mime' => 'audio/mpeg']
         ]
     ],
     [
         'name' => 'Bonton',
         'streams' => [
-            ['name' => 'Default MP3', 'url' => 'https://ice.actve.net/fm-bonton-320', 'mime' => 'audio/mpeg']
+            ['name' => 'Default', 'url' => 'https://ice.actve.net/fm-bonton-320', 'mime' => 'audio/mpeg']
         ]
     ],                        
     [
         'name' => 'Evropa 2',
         'streams' => [
-            ['name' => 'Default MP3', 'url' => 'https://ice.actve.net/fm-evropa2-128', 'mime' => 'audio/mpeg']
+            ['name' => 'Default', 'url' => 'https://ice.actve.net/fm-evropa2-128', 'mime' => 'audio/mpeg']
         ]
     ],
     [
@@ -84,7 +84,7 @@ $default_stations = [
     [
         'name' => 'Radio 1',
         'streams' => [
-            ['name' => 'Default MP3', 'url' => 'https://live.radio1.pf:8443/radio1', 'mime' => 'audio/mpeg']
+            ['name' => 'Default', 'url' => 'https://live.radio1.pf:8443/radio1', 'mime' => 'audio/mpeg']
         ]
     ],            
     [
@@ -204,7 +204,7 @@ $default_stations = [
     [
         'name' => 'BBW World Service',
         'streams' => [
-            ['name' => 'Default MP3', 'url' => 'http://stream.live.vc.bbcmedia.co.uk/bbc_world_service', 'mime' => 'audio/mpeg']
+            ['name' => 'Default', 'url' => 'http://stream.live.vc.bbcmedia.co.uk/bbc_world_service', 'mime' => 'audio/mpeg']
         ]
     ]  
 ];
