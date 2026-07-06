@@ -539,7 +539,7 @@ $baseUrl = $protocol . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '
                     <select class="stream-selector" id="select-<?= $index ?>" onchange="switchStreamVariant(<?= $index ?>)">
                         <?php foreach ($station['streams'] as $stIdx => $streamItem): ?>
                             <option value="<?= $stIdx ?>" data-url="<?= htmlspecialchars($streamItem['url']) ?>" data-mime="<?= htmlspecialchars($streamItem['mime']) ?>" data-variant-name="<?= htmlspecialchars($streamItem['name'], ENT_QUOTES) ?>">
-                                Variant: <?= htmlspecialchars($streamItem['name']) ?> (<?= htmlspecialchars($streamItem['mime']) ?>)
+                                <?= htmlspecialchars($streamItem['name']) ?> (<?= htmlspecialchars($streamItem['mime']) ?>)
                             </option>
                         <?php endforeach; ?>
                     </select>
