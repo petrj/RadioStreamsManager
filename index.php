@@ -1,92 +1,248 @@
 <?php
-// Default stream list
-$default_streams = [
-    ['name' => 'Radio Plus', 'url' => 'http://amp.cesnet.cz:8000/cro-plus.ogg', 'mime' => 'audio/ogg'],
-    ['name' => 'Radio Beat', 'url' => 'https://stream.rcs.revma.com/3d47nqvb938uv', 'mime' => 'audio/mpeg'],    
-    ['name' => 'Rock Rádio', 'url' => 'http://ice.abradio.cz/sumava128.mp3', 'mime' => 'audio/mpeg'],
-    ['name' => 'Rádio Impuls', 'url' => 'http://icecast1.play.cz/impuls128.mp3', 'mime' => 'audio/mpeg'],
-    ['name' => 'Frekvence 1', 'url' => 'https://ice.actve.net/fm-frekvence1-128', 'mime' => 'audio/mpeg'],
-    ['name' => 'Bonton', 'url' => 'https://ice.actve.net/fm-bonton-320', 'mime' => 'audio/mpeg'],                        
-    ['name' => 'Evropa 2', 'url' => 'https://ice.actve.net/fm-evropa2-128', 'mime' => 'audio/mpeg'],
-    ['name' => 'Čas Rock', 'url' => 'https://icecast7.play.cz/casrock128.mp3', 'mime' => 'audio/mpeg'],
-    ['name' => 'Radio Čas', 'url' => 'https://icecast6.play.cz/casradio128.mp3', 'mime' => 'audio/mpeg'],    
-    ['name' => 'Rozk Zone', 'url' => 'https://icecast5.play.cz/rockzone128.mp3', 'mime' => 'audio/mpeg'],    
-    ['name' => 'Color Music Radio', 'url' => 'https://icecast6.play.cz/color192.mp3', 'mime' => 'audio/mpeg'],    
-    ['name' => 'Radio 1', 'url' => 'https://live.radio1.pf:8443/radio1', 'mime' => 'audio/mpeg'],            
-    ['name' => 'Blaník', 'url' => 'http://ice.abradio.cz/blanikfm128.mp3', 'mime' => 'audio/mpeg'],
-    ['name' => 'Humor', 'url' => 'http://mp3stream4.abradio.cz/humor128.mp3', 'mime' => 'audio/mpeg'],
-    ['name' => 'Oldies', 'url' => 'https://ice.radia.cz/oldiesradio128.mp3', 'mime' => 'audio/mpeg'],
-    ['name' => 'Hey Radio', 'url' => 'https://icecast3.play.cz/hey-radio128.mp3', 'mime' => 'audio/mpeg'],
-    ['name' => 'ZUN', 'url' => 'https://icecast9.play.cz/zun192.mp3', 'mime' => 'audio/mpeg'],
-    ['name' => 'Radio Relax', 'url' => 'https://icecast7.play.cz/relax128.mp3', 'mime' => 'audio/mpeg'],                                                            
-    ['name' => 'Rádio Regina BB', 'url' => 'http://live.slovakradio.sk:8000/Regina_BB_128.mp3', 'mime' => 'audio/mpeg'],
-    ['name' => 'ČRo 1 - Radiožurnál', 'url' => 'http://icecast8.play.cz:8000/cro1-128.mp3', 'mime' => 'audio/mpeg'],
-    ['name' => 'ČRo 2 - Praha', 'url' => 'http://icecast7.play.cz:8000/cro2-128.mp3', 'mime' => 'audio/mpeg'],
-    ['name' => 'ČRo 3 - Vltava', 'url' => 'http://amp.cesnet.cz:8000/z-cro3.ogg', 'mime' => 'audio/ogg'],    
-    ['name' => 'ČRo Radio Wave', 'url' => 'https://rozhlas.stream/wave_mp3_128.mp3', 'mime' => 'audio/mpeg'],
-    ['name' => 'ČRo Radio Junior', 'url' => 'http://amp.cesnet.cz:8000/z-cro-radio-junior.ogg', 'mime' => 'audio/ogg'],
-    ['name' => 'ČRo Jazz', 'url' => 'http://amp.cesnet.cz:8000/z-cro-jazz.ogg', 'mime' => 'audio/ogg'],
-    ['name' => 'ČRo D-dur', 'url' => 'http://amp.cesnet.cz:8000/z-cro-d-dur.ogg', 'mime' => 'audio/ogg'],
-    ['name' => 'Radio Prague International', 'url' => 'https://rozhlas.stream/cro7_mp3_128.mp3', 'mime' => 'audio/mpeg'],    
-    ['name' => 'Classic Praha', 'url' => 'http://icecast8.play.cz/classic128.mp3', 'mime' => 'audio/mpeg'],    
-    ['name' => 'BBW World Service', 'url' => 'http://stream.live.vc.bbcmedia.co.uk/bbc_world_service', 'mime' => 'audio/mpeg']  
-    
+// Default nested stream list structure (Multiple streams per station)
 
-   
+$default_stations = [
+    [
+        'name' => 'ČRo 1 - Radiožurnál',
+        'streams' => [
+            ['name' => 'MP3 128k', 'url' => 'http://icecast8.play.cz:8000/cro1-128.mp3', 'mime' => 'audio/mpeg'],
+            ['name' => 'OGG High', 'url' => 'http://amp.cesnet.cz:8000/cro1.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/cro1-256.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG High', 'url' => 'http://amp.cesnet.cz:8000/z-cro1.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/z-cro1-256.ogg', 'mime' => 'audio/ogg']
+        ]
+    ],
+    [
+        'name' => 'Radio Plus',
+        'streams' => [
+            ['name' => 'OGG Stream', 'url' => 'http://amp.cesnet.cz:8000/cro-plus.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/cro-plus-256.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG Stream', 'url' => 'http://amp.cesnet.cz:8000/z-cro-plus.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/z-cro-plus-256.ogg', 'mime' => 'audio/ogg']
+        ]
+    ],
+    [
+        'name' => 'Radio Beat',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'https://stream.rcs.revma.com/3d47nqvb938uv', 'mime' => 'audio/mpeg']
+        ]
+    ],    
+    [
+        'name' => 'Rock Rádio',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'http://ice.abradio.cz/sumava128.mp3', 'mime' => 'audio/mpeg']
+        ]
+    ],
+    [
+        'name' => 'Rádio Impuls',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'http://icecast1.play.cz/impuls128.mp3', 'mime' => 'audio/mpeg']
+        ]
+    ],
+    [
+        'name' => 'Frekvence 1',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'https://ice.actve.net/fm-frekvence1-128', 'mime' => 'audio/mpeg']
+        ]
+    ],
+    [
+        'name' => 'Bonton',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'https://ice.actve.net/fm-bonton-320', 'mime' => 'audio/mpeg']
+        ]
+    ],                        
+    [
+        'name' => 'Evropa 2',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'https://ice.actve.net/fm-evropa2-128', 'mime' => 'audio/mpeg']
+        ]
+    ],
+    [
+        'name' => 'Čas Rock',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'https://icecast7.play.cz/casrock128.mp3', 'mime' => 'audio/mpeg']
+        ]
+    ],
+    [
+        'name' => 'Radio Čas',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'https://icecast6.play.cz/casradio128.mp3', 'mime' => 'audio/mpeg']
+        ]
+    ],    
+    [
+        'name' => 'Rozk Zone',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'https://icecast5.play.cz/rockzone128.mp3', 'mime' => 'audio/mpeg']
+        ]
+    ],    
+    [
+        'name' => 'Color Music Radio',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'https://icecast6.play.cz/color192.mp3', 'mime' => 'audio/mpeg']
+        ]
+    ],    
+    [
+        'name' => 'Radio 1',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'https://live.radio1.pf:8443/radio1', 'mime' => 'audio/mpeg']
+        ]
+    ],            
+    [
+        'name' => 'Blaník',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'http://ice.abradio.cz/blanikfm128.mp3', 'mime' => 'audio/mpeg']
+        ]
+    ],
+    [
+        'name' => 'Humor',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'http://mp3stream4.abradio.cz/humor128.mp3', 'mime' => 'audio/mpeg']
+        ]
+    ],
+    [
+        'name' => 'Oldies',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'https://ice.radia.cz/oldiesradio128.mp3', 'mime' => 'audio/mpeg']
+        ]
+    ],
+    [
+        'name' => 'Hey Radio',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'https://icecast3.play.cz/hey-radio128.mp3', 'mime' => 'audio/mpeg']
+        ]
+    ],
+    [
+        'name' => 'ZUN',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'https://icecast9.play.cz/zun192.mp3', 'mime' => 'audio/mpeg']
+        ]
+    ],
+    [
+        'name' => 'Radio Relax',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'https://icecast7.play.cz/relax128.mp3', 'mime' => 'audio/mpeg']
+        ]
+    ],                                                                        
+    [
+        'name' => 'Rádio Regina BB',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'http://live.slovakradio.sk:8000/Regina_BB_128.mp3', 'mime' => 'audio/mpeg']
+        ]
+    ],
+    [
+        'name' => 'ČRo 2 - Praha',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'http://icecast7.play.cz:8000/cro2-128.mp3', 'mime' => 'audio/mpeg'],
+            ['name' => 'OGG High', 'url' => 'http://amp.cesnet.cz:8000/cro2.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/cro2-256.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG High', 'url' => 'http://amp.cesnet.cz:8000/z-cro2.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/z-cro2-256.ogg', 'mime' => 'audio/ogg']
+        ]
+    ],
+    [
+        'name' => 'ČRo 3 - Vltava',
+        'streams' => [
+            ['name' => 'Default OGG', 'url' => 'http://amp.cesnet.cz:8000/z-cro3.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG High', 'url' => 'http://amp.cesnet.cz:8000/cro3.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/cro3-256.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'FLAC Stream', 'url' => 'http://amp.cesnet.cz:8000/cro3.flac', 'mime' => 'audio/ogg'], // HTML specifikuje type="application/ogg"
+            ['name' => 'Z-OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/z-cro3-256.ogg', 'mime' => 'audio/ogg']
+        ]
+    ],    
+    [
+        'name' => 'ČRo Radio Wave',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'https://rozhlas.stream/wave_mp3_128.mp3', 'mime' => 'audio/mpeg'],
+            ['name' => 'OGG High', 'url' => 'http://amp.cesnet.cz:8000/cro-radio-wave.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/cro-radio-wave-256.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'FLAC Stream', 'url' => 'http://amp.cesnet.cz:8000/cro-radio-wave.flac', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG High', 'url' => 'http://amp.cesnet.cz:8000/z-cro-radio-wave.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/z-cro-radio-wave-256.ogg', 'mime' => 'audio/ogg']
+        ]
+    ],
+    [
+        'name' => 'ČRo Radio Junior',
+        'streams' => [
+            ['name' => 'Default OGG', 'url' => 'http://amp.cesnet.cz:8000/z-cro-radio-junior.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG High', 'url' => 'http://amp.cesnet.cz:8000/cro-radio-junior.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/cro-radio-junior-256.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/z-cro-radio-junior-256.ogg', 'mime' => 'audio/ogg']
+        ]
+    ],
+    [
+        'name' => 'ČRo Jazz',
+        'streams' => [
+            ['name' => 'Default OGG', 'url' => 'http://amp.cesnet.cz:8000/z-cro-jazz.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG High', 'url' => 'http://amp.cesnet.cz:8000/cro-jazz.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/cro-jazz-256.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'FLAC Stream', 'url' => 'http://amp.cesnet.cz:8000/cro-jazz.flac', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/z-cro-jazz-256.ogg', 'mime' => 'audio/ogg']
+        ]
+    ],
+    [
+        'name' => 'ČRo D-dur',
+        'streams' => [
+            ['name' => 'Default OGG', 'url' => 'http://amp.cesnet.cz:8000/z-cro-d-dur.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG High', 'url' => 'http://amp.cesnet.cz:8000/cro-d-dur.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/cro-d-dur-256.ogg', 'mime' => 'audio/ogg'],
+            ['name' => 'FLAC Stream', 'url' => 'http://amp.cesnet.cz:8000/cro-d-dur.flac', 'mime' => 'audio/ogg'],
+            ['name' => 'Z-OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/z-cro-d-dur-256.ogg', 'mime' => 'audio/ogg']
+        ]
+    ],
+    [
+        'name' => 'Radio Prague International',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'https://rozhlas.stream/cro7_mp3_128.mp3', 'mime' => 'audio/mpeg']
+        ]
+    ],    
+    [
+        'name' => 'Classic Praha',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'http://icecast8.play.cz/classic128.mp3', 'mime' => 'audio/mpeg']
+        ]
+    ],    
+    [
+        'name' => 'BBW World Service',
+        'streams' => [
+            ['name' => 'Default MP3', 'url' => 'http://stream.live.vc.bbcmedia.co.uk/bbc_world_service', 'mime' => 'audio/mpeg']
+        ]
+    ]  
 ];
 
-// Parse custom streams from URL parameter if present (expecting CSV format: name,url)
-$streams = [];
+
+$stations = [];
+
 if (!empty($_GET['url'])) {
     $csv_data = $_GET['url'];
-    
-    // Read the CSV string row by row safely
     $lines = preg_split('/\r\n|\r|\n/', trim($csv_data));
     $has_header = false;
     
     foreach ($lines as $line) {
         $row = str_getcsv($line, ',');
-        if (empty($row) || count($row) < 2) {
-            continue;
-        }
-        
-        // Skip header row if present
+        if (empty($row) || count($row) < 2) continue;
         if (!$has_header && strtolower($row[0]) === 'name' && strtolower($row[1]) === 'url') {
             $has_header = true;
             continue;
         }
-        
         $name = trim($row[0]);
         $url = trim($row[1]);
-        
         if (!empty($url)) {
-            // Simple MIME type detection based on extension
-            $mime = 'audio/mpeg';
-            if (str_contains(strtolower($url), '.ogg')) {
-                $mime = 'audio/ogg';
-            } elseif (str_contains(strtolower($url), '.wav')) {
-                $mime = 'audio/wav';
-            }
-
-            $streams[] = [
-                'name' => !empty($name) ? $name : 'Custom Stream',
-                'url' => $url,
-                'mime' => $mime
+            $mime = str_contains(strtolower($url), '.ogg') ? 'audio/ogg' : (str_contains(strtolower($url), '.wav') ? 'audio/wav' : 'audio/mpeg');
+            $stations[] = [
+                'name' => !empty($name) ? $name : 'Custom Station',
+                'streams' => [['name' => 'Primary Stream', 'url' => $url, 'mime' => $mime]]
             ];
         }
     }
 }
 
-// Fallback to defaults if no valid streams were loaded from URL
-if (empty($streams)) {
-    $streams = $default_streams;
+if (empty($stations)) {
+    $stations = $default_stations;
 }
 
-// AJAX: Server availability check
 if (isset($_GET['action']) && $_GET['action'] === 'check_url' && isset($_GET['url'])) {
     header('Content-Type: application/json');
-    $url = $_GET['url'];
-    $parts = parse_url($url);
+    $parts = parse_url($_GET['url']);
     if (!$parts || !isset($parts['host'])) {
         echo json_encode(['status' => 'offline']);
         exit;
@@ -104,66 +260,67 @@ if (isset($_GET['action']) && $_GET['action'] === 'check_url' && isset($_GET['ur
     exit;
 }
 
-// EXPORT: Global M3U Playlist
 if (isset($_GET['action']) && $_GET['action'] === 'export_m3u') {
     header('Content-Type: audio/x-mpegurl');
     header('Content-Disposition: attachment; filename="playlist.m3u"');
     echo "#EXTM3U\r\n";
-    foreach ($streams as $stream) {
-        echo "#EXTINF:-1," . $stream['name'] . "\r\n" . $stream['url'] . "\r\n";
+    foreach ($stations as $station) {
+        foreach ($station['streams'] as $st) {
+            echo "#EXTINF:-1," . $station['name'] . " (" . $st['name'] . ")\r\n" . $st['url'] . "\r\n";
+        }
     }
     exit;
 }
 
-// EXPORT: Single M3U Stream
-if (isset($_GET['action']) && $_GET['action'] === 'export_single_m3u' && isset($_GET['id'])) {
-    $id = (int)$_GET['id'];
-    if (isset($streams[$id])) {
-        $stream = $streams[$id];
-        $safeName = strtolower(preg_replace('/[^a-zA-Z0-9]/', '_', $stream['name']));
-        header('Content-Type: audio/x-mpegurl');
-        header('Content-Disposition: attachment; filename="' . $safeName . '.m3u"');
-        echo "#EXTM3U\r\n#EXTINF:-1," . $stream['name'] . "\r\n" . $stream['url'] . "\r\n";
-    }
+if (isset($_GET['action']) && $_GET['action'] === 'export_single_m3u' && isset($_GET['url']) && isset($_GET['name'])) {
+    $safeName = strtolower(preg_replace('/[^a-zA-Z0-9]/', '_', $_GET['name']));
+    header('Content-Type: audio/x-mpegurl');
+    header('Content-Disposition: attachment; filename="' . $safeName . '.m3u"');
+    echo "#EXTM3U\r\n#EXTINF:-1," . $_GET['name'] . "\r\n" . $_GET['url'] . "\r\n";
     exit;
 }
 
-// EXPORT: Global CSV
+if (isset($_GET['action']) && $_GET['action'] === 'export_json') {
+    header('Content-Type: application/json; charset=utf-8');
+    header('Content-Disposition: attachment; filename="stations.json"');
+    echo json_encode($stations, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
 if (isset($_GET['action']) && $_GET['action'] === 'export_csv') {
     header('Content-Type: text/csv; charset=utf-8');
     header('Content-Disposition: attachment; filename="streams.csv"');
     $output = fopen('php://output', 'w');
-    fprintf($output, chr(0xEF).chr(0xBB).chr(0xBF)); // BOM for Excel
-    fputcsv($output, ['name', 'url']);
-    foreach ($streams as $stream) { fputcsv($output, [$stream['name'], $stream['url']]); }
+    fprintf($output, chr(0xEF).chr(0xBB).chr(0xBF));
+    fputcsv($output, ['station_name', 'stream_variant', 'url']);
+    foreach ($stations as $station) {
+        foreach ($station['streams'] as $st) {
+            fputcsv($output, [$station['name'], $st['name'], $st['url']]);
+        }
+    }
     fclose($output);
     exit;
 }
 
-// EXPORT: Global JSON
-if (isset($_GET['action']) && $_GET['action'] === 'export_json') {
-    header('Content-Type: application/json; charset=utf-8');
-    header('Content-Disposition: attachment; filename="streams.json"');
-    echo json_encode($streams, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
-    exit;
-}
-
-// EXPORT: Global XML
 if (isset($_GET['action']) && $_GET['action'] === 'export_xml') {
     header('Content-Type: application/xml; charset=utf-8');
-    header('Content-Disposition: attachment; filename="streams.xml"');
-    $xml = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><streams></streams>');
-    foreach ($streams as $stream) {
-        $item = $xml->addChild('stream');
-        $item->addChild('name', htmlspecialchars($stream['name']));
-        $item->addChild('url', htmlspecialchars($stream['url']));
-        $item->addChild('mime', htmlspecialchars($stream['mime']));
+    header('Content-Disposition: attachment; filename="stations.xml"');
+    $xml = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><stations></stations>');
+    foreach ($stations as $station) {
+        $node = $xml->addChild('station');
+        $node->addChild('name', htmlspecialchars($station['name']));
+        $streamsNode = $node->addChild('streams');
+        foreach ($station['streams'] as $st) {
+            $stItem = $streamsNode->addChild('stream');
+            $stItem->addChild('variant', htmlspecialchars($st['name']));
+            $stItem->addChild('url', htmlspecialchars($st['url']));
+            $stItem->addChild('mime', htmlspecialchars($st['mime']));
+        }
     }
     echo $xml->asXML();
     exit;
 }
 
-// Helper to determine base URL for self-referencing links
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
 $baseUrl = $protocol . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '?');
 ?>
@@ -175,14 +332,14 @@ $baseUrl = $protocol . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '
     <title>Radio Stream Manager</title>
     <style>
         :root {
-            --bg-color: #121212;        /* Flutter Material Dark Theme Baseline Background */
-            --card-bg: #1e1e1e;         /* Flutter Material Dark Elevated Surface */
-            --text-color: #e3e3e3;      /* High-emphasis text */
-            --text-muted: #a0a0a0;      /* Medium-emphasis text */
-            --accent-color: #2196f3;    /* Flutter Material Blue Accent */
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e3e3e3;
+            --text-muted: #a0a0a0;
+            --accent-color: #2196f3;
             --border-radius: 12px;
-            --success-color: #4caf50;   /* Flutter Dark Success Green */
-            --danger-color: #f44336;    /* Flutter Dark Danger Red */
+            --success-color: #4caf50;
+            --danger-color: #f44336;
         }
 
         body {
@@ -203,7 +360,7 @@ $baseUrl = $protocol . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '
         }
 
         .stream-header {
-            display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;
+            display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;
         }
 
         .stream-title-group {
@@ -212,7 +369,6 @@ $baseUrl = $protocol . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '
 
         .stream-name { font-size: 1.2rem; font-weight: 600; margin: 0; color: var(--text-color); }
 
-        /* Miniature Equalizer next to title */
         .equalizer-container {
             display: none; align-items: flex-end; gap: 2px;
             width: 18px; height: 14px; padding-bottom: 1px; flex-shrink: 0;
@@ -220,30 +376,29 @@ $baseUrl = $protocol . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '
         .equalizer-container.playing { display: flex; }
         .eq-bar { width: 3px; height: 3px; background-color: var(--accent-color); border-radius: 1px 1px 0 0; }
 
-        /* LED Status Indicator - Moved to the right side of the card header */
         .status-dot { 
             width: 1rem; height: 1rem; border-radius: 50%; 
             background: #333333; display: inline-block; 
             box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
             border: 1px solid #2d2d2d; flex-shrink: 0;
         }
-        .status-online { 
-            background: var(--success-color); 
-            box-shadow: 0 0 10px var(--success-color), inset 0 1px 2px rgba(255,255,255,0.3); 
-        }
-        .status-offline { 
-            background: var(--danger-color); 
-            box-shadow: 0 0 10px var(--danger-color), inset 0 1px 2px rgba(255,255,255,0.3); 
-        }
-        .status-checking { 
-            background: #ffeb3b; 
-            box-shadow: 0 0 10px #ffeb3b;
-            animation: pulse 1s infinite; 
-        }
+        .status-online { background: var(--success-color); box-shadow: 0 0 10px var(--success-color), inset 0 1px 2px rgba(255,255,255,0.3); }
+        .status-offline { background: var(--danger-color); box-shadow: 0 0 10px var(--danger-color), inset 0 1px 2px rgba(255,255,255,0.3); }
+        .status-checking { background: #ffeb3b; box-shadow: 0 0 10px #ffeb3b; animation: pulse 1s infinite; }
 
         @keyframes pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
 
-        /* URL sub-header container */
+        .selector-container {
+            margin-top: 12px;
+            margin-bottom: 4px;
+        }
+        .stream-selector {
+            width: 100%; background: #2d2d2d; color: var(--text-color);
+            border: 1px solid #3d3d3d; padding: 8px 12px; border-radius: 6px;
+            font-size: 0.9rem; font-weight: 500; cursor: pointer; outline: none;
+        }
+        .stream-selector:focus { border-color: var(--accent-color); }
+
         .url-container {
             display: flex; align-items: center; justify-content: flex-start; gap: 6px;
             margin-bottom: 16px; width: 100%;
@@ -263,10 +418,8 @@ $baseUrl = $protocol . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '
         }
         .copy-url-btn:hover { color: var(--accent-color); background: #2d2d2d; }
         
-        /* Dark mode injection for native audio element */
         audio { width: 100%; border-radius: 8px; filter: invert(0.88) hue-rotate(180deg); } 
 
-        /* Actions container */
         .actions-group { 
             display: flex; gap: 6px; align-items: center; justify-content: flex-end; 
             margin-top: 12px; margin-bottom: 12px; flex-wrap: wrap; 
@@ -276,10 +429,8 @@ $baseUrl = $protocol . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '
             background: #2d2d2d; border: none; border-radius: 6px;
             padding: 6px 10px; display: flex; align-items: center; gap: 4px;
             cursor: pointer; color: #cccccc; font-size: 0.8rem; font-weight: 500;
-            transition: background 0.2s, color 0.2s;
-            text-decoration: none;
+            transition: background 0.2s, color 0.2s; text-decoration: none;
         }
-
         .icon-btn:hover { background: #3d3d3d; color: #ffffff; }
 
         .footer {
@@ -297,7 +448,6 @@ $baseUrl = $protocol . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '
         .btn-export.main-m3u { background-color: var(--accent-color); color: #ffffff; border-color: var(--accent-color); }
         .btn-export.main-m3u:hover { background-color: #1976d2; }
 
-        /* Modals in Dark Mode */
         .modal-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px);
@@ -319,17 +469,14 @@ $baseUrl = $protocol . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '
 <body>
 
 <div class="container">
-    <?php foreach ($streams as $index => $stream): 
-        // Create a single stream CSV block: "name,url\n{stream_name},{stream_url}"
-        $single_csv = "name,url\n\"" . str_replace('"', '""', $stream['name']) . "\",\"" . str_replace('"', '""', $stream['url']) . "\"";
-        $open_url = $baseUrl . '?url=' . urlencode($single_csv);
+    <?php foreach ($stations as $index => $station): 
+        $primaryStream = $station['streams'][0];
+        $streamCount = count($station['streams']);
     ?>
         <div class="stream-card" id="card-<?= $index ?>">
-            <!-- Top Header: Title, Inline Mini Equalizer, and LED on the right -->
             <div class="stream-header">
                 <div class="stream-title-group">
-                    <h2 class="stream-name"><?= htmlspecialchars($stream['name']) ?></h2>
-                    <!-- Mini Inline Equalizer Visualizer -->
+                    <h2 class="stream-name" id="station-title-<?= $index ?>"><?= htmlspecialchars($station['name']) ?></h2>
                     <div class="equalizer-container" id="eq-<?= $index ?>">
                         <div class="eq-bar"></div>
                         <div class="eq-bar"></div>
@@ -340,27 +487,43 @@ $baseUrl = $protocol . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '
                 <span class="status-dot" id="status-<?= $index ?>" title="Unknown status"></span>
             </div>
 
-            <!-- URL Address Row -->
+            <!-- Dynamically Controlled Link and Button Controls -->
             <div class="url-container">
-                <a class="stream-link" href="<?= htmlspecialchars($stream['url']) ?>" target="_blank" title="<?= htmlspecialchars($stream['url']) ?>">
-                    <?= htmlspecialchars($stream['url']) ?>
+                <a class="stream-link" id="link-<?= $index ?>" href="<?= htmlspecialchars($primaryStream['url']) ?>" target="_blank" title="<?= htmlspecialchars($primaryStream['url']) ?>">
+                    <?= htmlspecialchars($primaryStream['url']) ?>
                 </a>
-                <button class="copy-url-btn" onclick="copyDirectText(this, '<?= htmlspecialchars($stream['url'], ENT_QUOTES) ?>')" title="Copy URL address">📋</button>
+                <button class="copy-url-btn" id="copy-btn-<?= $index ?>" onclick="copySelectedStreamText(<?= $index ?>)" title="Copy URL address">📋</button>
             </div>
 
-            <!-- Audio Player Component -->
-            <audio controls preload="none" onplay="startPlayback(<?= $index ?>, '<?= htmlspecialchars($stream['name'], ENT_QUOTES) ?>')" onpause="stopPlayback(<?= $index ?>)" onended="stopPlayback(<?= $index ?>)">
-                <source src="<?= htmlspecialchars($stream['url']) ?>" type="<?= htmlspecialchars($stream['mime']) ?>">
+            <audio id="player-<?= $index ?>" controls preload="none" onplay="startPlayback(<?= $index ?>)" onpause="stopPlayback(<?= $index ?>)" onended="stopPlayback(<?= $index ?>)">
+                <source id="source-<?= $index ?>" src="<?= htmlspecialchars($primaryStream['url']) ?>" type="<?= htmlspecialchars($primaryStream['mime']) ?>">
             </audio>
 
-            <!-- Actions Controls Row -->
+            <!-- Custom Variant Selector - Only rendered if count > 1 and positioned under player -->
+            <?php if ($streamCount > 1): ?>
+                <div class="selector-container">
+                    <select class="stream-selector" id="select-<?= $index ?>" onchange="switchStreamVariant(<?= $index ?>)">
+                        <?php foreach ($station['streams'] as $stIdx => $streamItem): ?>
+                            <option value="<?= $stIdx ?>" data-url="<?= htmlspecialchars($streamItem['url']) ?>" data-mime="<?= htmlspecialchars($streamItem['mime']) ?>" data-variant-name="<?= htmlspecialchars($streamItem['name'], ENT_QUOTES) ?>">
+                                Variant: <?= htmlspecialchars($streamItem['name']) ?> (<?= htmlspecialchars($streamItem['mime']) ?>)
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+            <?php else: ?>
+                <!-- Hidden fallback element for index matching layout logic -->
+                <select id="select-<?= $index ?>" style="display:none;">
+                    <option value="0" data-url="<?= htmlspecialchars($primaryStream['url']) ?>" data-mime="<?= htmlspecialchars($primaryStream['mime']) ?>" data-variant-name="<?= htmlspecialchars($primaryStream['name'], ENT_QUOTES) ?>"></option>
+                </select>
+            <?php endif; ?>
+
             <div class="actions-group">
-                <a class="icon-btn" href="<?= $open_url ?>" target="_blank" title="Open this stream in a new window">👁️ Otevřít</a>
-                <button class="icon-btn" onclick="checkStream('<?= urlencode($stream['url']) ?>', <?= $index ?>)" title="Test stream availability">⚡ Test</button>
-                <button class="icon-btn" onclick="openRecordingModal('<?= htmlspecialchars($stream['name'], ENT_QUOTES) ?>', '<?= htmlspecialchars($stream['url'], ENT_QUOTES) ?>')" title="Stream recording options">📥 Record</button>
-                <a class="icon-btn" href="?action=export_single_m3u&id=<?= $index ?>" title="Export this stream to .m3u">📄 .m3u</a>
-                <button class="icon-btn" onclick="shareStream('<?= htmlspecialchars($stream['name'], ENT_QUOTES) ?>', '<?= htmlspecialchars($stream['url'], ENT_QUOTES) ?>')" title="Share stream / Open externally">🔗 Share</button>
-                <a class="icon-btn" href="<?= htmlspecialchars($stream['url']) ?>" title="Drag and drop onto your Bookmarks Bar" target="_blank" draggable="true" onclick="alert('Drag and drop this button onto your browser\'s Bookmarks Bar to save it.'); return false;">🔖 Bookmark</a>
+                <button class="icon-btn" onclick="openStreamWindow(<?= $index ?>)" title="Open this stream in a new window">👁️ Otevřít</button>
+                <button class="icon-btn" onclick="checkSelectedStream(<?= $index ?>)" title="Test stream availability">⚡ Test</button>
+                <button class="icon-btn" onclick="openSelectedRecordingModal(<?= $index ?>)" title="Stream recording options">📥 Record</button>
+                <button class="icon-btn" onclick="exportSelectedSingleM3u(<?= $index ?>)" title="Export this stream variant to .m3u">📄 .m3u</button>
+                <button class="icon-btn" onclick="shareSelectedStream(<?= $index ?>)" title="Share stream / Open externally">🔗 Share</button>
+                <button class="icon-btn" id="bookmark-btn-<?= $index ?>" onclick="handleBookmarkAction(<?= $index ?>)" title="Bookmark Stream" draggable="true">🔖 Bookmark</button>
             </div>
         </div>
     <?php endforeach; ?>
@@ -373,7 +536,7 @@ $baseUrl = $protocol . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '
     </div>
 </div>
 
-<!-- Recording Modal -->
+<!-- Recording Modal Container -->
 <div class="modal-overlay" id="recordingModal" onclick="closeRecordingModal(event)">
     <div class="modal-content" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="document.getElementById('recordingModal').style.display='none'">×</button>
@@ -402,10 +565,50 @@ $baseUrl = $protocol . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '
 <script>
 const activeIntervals = {};
 const originalTitle = "Radio Stream Manager";
+const baseUrl = '<?= $baseUrl ?>';
 
-function startPlayback(index, streamName) {
+function getSelectedStreamData(index) {
+    const selector = document.getElementById(`select-${index}`);
+    const selectedOption = selector.options[selector.selectedIndex];
+    const stationName = document.getElementById(`station-title-${index}`).innerText;
+    const variantName = selectedOption.getAttribute('data-variant-name');
+    
+    return {
+        stationName: stationName,
+        fullName: variantName ? `${stationName} (${variantName})` : stationName,
+        url: selectedOption.getAttribute('data-url'),
+        mime: selectedOption.getAttribute('data-mime')
+    };
+}
+
+function switchStreamVariant(index) {
+    const data = getSelectedStreamData(index);
+    const player = document.getElementById(`player-${index}`);
+    const source = document.getElementById(`source-${index}`);
+    const link = document.getElementById(`link-${index}`);
+    const dot = document.getElementById(`status-${index}`);
+    
+    dot.className = 'status-dot';
+    const isCurrentlyPlaying = !player.paused;
+    player.pause();
+
+    source.setAttribute('src', data.url);
+    source.setAttribute('type', data.mime);
+    player.load();
+
+    link.setAttribute('href', data.url);
+    link.setAttribute('title', data.url);
+    link.innerText = data.url;
+
+    if (isCurrentlyPlaying) {
+        player.play().catch(err => console.log("Engine initialization pause catch: ", err));
+    }
+}
+
+function startPlayback(index) {
+    const data = getSelectedStreamData(index);
     document.querySelectorAll('audio').forEach((audio, i) => { if (i !== index && !audio.paused) audio.pause(); });
-    document.title = `▶ Playing ${streamName}`;
+    document.title = `▶ Playing ${data.fullName}`;
     
     const container = document.getElementById(`eq-${index}`);
     container.classList.add('playing');
@@ -418,7 +621,6 @@ function startPlayback(index, streamName) {
 
 function stopPlayback(index) {
     document.title = originalTitle;
-    
     const container = document.getElementById(`eq-${index}`);
     if (!container) return;
     container.classList.remove('playing');
@@ -426,35 +628,70 @@ function stopPlayback(index) {
     container.querySelectorAll('.eq-bar').forEach(bar => { bar.style.height = '3px'; });
 }
 
-function copyDirectText(button, text) {
-    navigator.clipboard.writeText(text).then(() => {
+function copySelectedStreamText(index) {
+    const data = getSelectedStreamData(index);
+    const button = document.getElementById(`copy-btn-${index}`);
+    navigator.clipboard.writeText(data.url).then(() => {
         const original = button.innerText;
         button.innerText = '✓';
         setTimeout(() => { button.innerText = original; }, 1500);
     });
 }
 
-function shareStream(name, url) {
-    if (navigator.share) {
-        navigator.share({
-            title: name,
-            text: `Listen to ${name} stream`,
-            url: url
-        }).catch(err => console.log('Error sharing:', err));
-    } else {
-        navigator.clipboard.writeText(url);
-        alert(`Native sharing is not supported by your browser.\nURL for "${name}" has been copied to your clipboard.`);
+function openStreamWindow(index) {
+    const data = getSelectedStreamData(index);
+    const singleCsv = `name,url\n"${data.fullName.replace(/"/g, '""')}","${data.url.replace(/"/g, '""')}"`;
+    const finalTargetUrl = `${baseUrl}?url=${encodeURIComponent(singleCsv)}`;
+    window.open(finalTargetUrl, '_blank');
+}
+
+async function checkSelectedStream(index) {
+    const data = getSelectedStreamData(index);
+    const dot = document.getElementById(`status-${index}`);
+    dot.className = 'status-dot status-checking';
+    try {
+        const response = await fetch(`?action=check_url&url=${encodeURIComponent(data.url)}`);
+        const result = await response.json();
+        dot.className = `status-dot status-${result.status}`;
+    } catch (error) {
+        dot.className = 'status-dot status-offline';
     }
 }
 
-function openRecordingModal(name, url) {
-    const safeFilename = name.toLowerCase().replace(/[^a-z0-9]/g, '_') + '_output.mp3';
-    document.getElementById('modalRadioName').innerText = `Recording: ${name}`;
-    document.getElementById('cmdFfmpegRaw').innerText = `ffmpeg -i "${url}" -c copy "${safeFilename}"`;
-    document.getElementById('cmdFfmpegCompress').innerText = `ffmpeg -i "${url}" -c:a libmp3lame -b:a 64k "${safeFilename}"`;
-    document.getElementById('cmdVlc').innerText = `cvlc "${url}" --sout "#duplicate{dst=std{access=file,mux=raw,dst='${safeFilename}'}}"`;
-    document.getElementById('cmdMplayer').innerText = `mplayer -playlist "${url}" -dumpstream -dumpfile "${safeFilename}"`;
+function openSelectedRecordingModal(index) {
+    const data = getSelectedStreamData(index);
+    const safeFilename = data.fullName.toLowerCase().replace(/[^a-z0-9]/g, '_') + '_output.mp3';
+    
+    document.getElementById('modalRadioName').innerText = `Recording: ${data.fullName}`;
+    document.getElementById('cmdFfmpegRaw').innerText = `ffmpeg -i "${data.url}" -c copy "${safeFilename}"`;
+    document.getElementById('cmdFfmpegCompress').innerText = `ffmpeg -i "${data.url}" -c:a libmp3lame -b:a 64k "${safeFilename}"`;
+    document.getElementById('cmdVlc').innerText = `cvlc "${data.url}" --sout "#duplicate{dst=std{access=file,mux=raw,dst='${safeFilename}'}}"`;
+    document.getElementById('cmdMplayer').innerText = `mplayer -playlist "${data.url}" -dumpstream -dumpfile "${safeFilename}"`;
     document.getElementById('recordingModal').style.display = 'flex';
+}
+
+function exportSelectedSingleM3u(index) {
+    const data = getSelectedStreamData(index);
+    window.location.href = `?action=export_single_m3u&name=${encodeURIComponent(data.fullName)}&url=${encodeURIComponent(data.url)}`;
+}
+
+function shareSelectedStream(index) {
+    const data = getSelectedStreamData(index);
+    if (navigator.share) {
+        navigator.share({
+            title: data.fullName,
+            text: `Listen to ${data.fullName} stream`,
+            url: data.url
+        }).catch(err => console.log('Error sharing:', err));
+    } else {
+        navigator.clipboard.writeText(data.url);
+        alert(`Native sharing is not supported by your browser.\nURL for "${data.fullName}" has been copied to your clipboard.`);
+    }
+}
+
+function handleBookmarkAction(index) {
+    const data = getSelectedStreamData(index);
+    alert(`Drag and drop this station's bookmark button onto your bar. It will remember the active stream variant targeting: ${data.url}`);
 }
 
 function closeRecordingModal(event) {
@@ -469,18 +706,6 @@ function copyCode(button) {
         button.style.color = '#ffffff';
         setTimeout(() => { button.innerText = originalText; button.style.background = '#2d2d2d'; button.style.color = '#cccccc'; }, 2000);
     });
-}
-
-async function checkStream(encodedUrl, index) {
-    const dot = document.getElementById(`status-${index}`);
-    dot.className = 'status-dot status-checking';
-    try {
-        const response = await fetch(`?action=check_url&url=${encodedUrl}`);
-        const data = await response.json();
-        dot.className = `status-dot status-${data.status}`;
-    } catch (error) {
-        dot.className = 'status-dot status-offline';
-    }
 }
 </script>
 </body>
