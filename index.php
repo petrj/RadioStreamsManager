@@ -14,7 +14,8 @@ $default_stations = [
     ],
     [
         'name' => 'Radio Plus',
-        'streams' => [
+        'streams' => [        
+            ['name' => 'Default MP3', 'url' => 'https://rozhlas.stream/plus_mp3_128.mp3', 'mime' => 'audio/mp3'],        
             ['name' => 'OGG Stream', 'url' => 'http://amp.cesnet.cz:8000/cro-plus.ogg', 'mime' => 'audio/ogg'],
             ['name' => 'OGG 256k', 'url' => 'http://amp.cesnet.cz:8000/cro-plus-256.ogg', 'mime' => 'audio/ogg'],
             ['name' => 'Z-OGG Stream', 'url' => 'http://amp.cesnet.cz:8000/z-cro-plus.ogg', 'mime' => 'audio/ogg'],
@@ -24,7 +25,9 @@ $default_stations = [
     [
         'name' => 'Radio Beat',
         'streams' => [
-            ['name' => 'Default', 'url' => 'https://stream.rcs.revma.com/3d47nqvb938uv', 'mime' => 'audio/mpeg']
+            ['name' => 'Default', 'url' => 'https://stream.rcs.revma.com/3d47nqvb938uv', 'mime' => 'audio/mpeg'],
+            ['name' => 'Default 2', 'url' => 'https://icecast2.play.cz/radiobeat128.mp3', 'mime' => 'audio/mpeg']
+            
         ]
     ],    
     [
