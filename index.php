@@ -243,8 +243,14 @@ $default_stations = [
     ]
 ];
 
-
 $stations = [];
+
+// Polyfill for PHP versions older than 8.0
+if (!function_exists('str_contains')) {
+    function str_contains(string $haystack, string $needle): bool {
+        return '' === $needle || false !== strpos($haystack, $needle);
+    }
+}
 
 if (!empty($_GET['url'])) {
     $csv_data = $_GET['url'];
