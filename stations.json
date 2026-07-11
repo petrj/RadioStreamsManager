@@ -1,0 +1,577 @@
+[
+  {
+    "name": "Radio Plus",
+    "streams": [
+      {
+        "name": "AAC 176",
+        "url": "https://rozhlas.stream/plus_high.aac",
+        "mime": "audio/aac"
+      },
+      {
+        "name": "AAC 64",
+        "url": "https://rozhlas.stream/plus_low.aac",
+        "mime": "audio/aac"
+      },
+      {
+        "name": "MP3 128",
+        "url": "https://rozhlas.stream/plus_mp3_128.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "OGG Stream",
+        "url": "https://amp.cesnet.cz:8443/cro-plus.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "OGG 256k",
+        "url": "https://amp.cesnet.cz:8443/cro-plus-256.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "Z-OGG Stream",
+        "url": "https://amp.cesnet.cz:8443/z-cro-plus.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "Z-OGG 256k",
+        "url": "https://amp.cesnet.cz:8443/z-cro-plus-256.ogg",
+        "mime": "audio/ogg"
+      }
+    ]
+  },
+  {
+    "name": "Radio Beat",
+    "streams": [
+      {
+        "name": "AAC 128",
+        "url": "https://icecast2.play.cz/beat128aac",
+        "mime": "audio/aac"
+      },
+      {
+        "name": "MP3 128",
+        "url": "https://icecast2.play.cz/radiobeat128.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "MP3 128 2",
+        "url": "https://icecast5.play.cz/radiobeat128.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "MP3 128 3",
+        "url": "https://ice5.radia.cz/beat128.mp3",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Impuls",
+    "streams": [
+      {
+        "name": "MP3 128",
+        "url": "https://icecast1.play.cz/impuls128.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "MP3 128 2",
+        "url": "https://icecast5.play.cz/impuls128.mp3?1571059741",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "MP3 64",
+        "url": "https://icecast5.play.cz/impuls64.mp3",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  {
+    "name": "ČRo 1 - Radiožurnál",
+    "streams": [
+      {
+        "name": "AAC 192",
+        "url": "https://icecast1.play.cz/cro1128aac",
+        "mime": "audio/aac"
+      },
+      {
+        "name": "MP3 128",
+        "url": "https://icecast7.play.cz/cro1-128.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "MP3 128 2",
+        "url": "https://icecast8.play.cz:8443/cro1-128.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "OGG High",
+        "url": "https://amp.cesnet.cz:8443/cro1.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "OGG 256k",
+        "url": "https://amp.cesnet.cz:8443/cro1-256.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "Z-OGG High",
+        "url": "https://amp.cesnet.cz:8443/z-cro1.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "Z-OGG 256k",
+        "url": "https://amp.cesnet.cz:8443/z-cro1-256.ogg",
+        "mime": "audio/ogg"
+      }
+    ]
+  },
+  {
+    "name": "Rock Rádio",
+    "streams": [
+      {
+        "name": "Default MP3",
+        "url": "https://ice.abradio.cz/sumava128.mp3",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  {
+    "name": "Frekvence 1",
+    "streams": [
+      {
+        "name": "MP3 320",
+        "url": "https://ice.actve.net/fm-frekvence1-320",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "MP3 128",
+        "url": "https://ice.actve.net/fm-frekvence1-128",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  {
+    "name": "Bonton",
+    "streams": [
+      {
+        "name": "MP3 320",
+        "url": "https://ice.actve.net/fm-bonton-320",
+        "mime": "audio/mmp3"
+      },
+      {
+        "name": "MP3 320",
+        "url": "https://ice.actve.net/fm-bonton-128",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "AAC 64",
+        "url": "https://ice.actve.net/fm-bonton-aac",
+        "mime": "audio/aac"
+      }
+    ]
+  },
+  {
+    "name": "Evropa 2",
+    "streams": [
+      {
+        "name": "MP3 128",
+        "url": "https://ice.actve.net/fm-evropa2-128",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "AAC 64",
+        "url": "https://29043.live.streamtheworld.com/EVROPA2AAC.aac",
+        "mime": "audio/aac"
+      }
+    ]
+  },
+  {
+    "name": "Čas Rock",
+    "streams": [
+      {
+        "name": "MP3 192",
+        "url": "https://icecast9.play.cz/casrock192.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "MP3 128",
+        "url": "https://icecast7.play.cz/casrock128.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "MP3 128 2",
+        "url": "https://icecast6.play.cz/casrock128.mp3",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  {
+    "name": "Radio Čas",
+    "streams": [
+      {
+        "name": "MP3 128",
+        "url": "https://icecast6.play.cz/casradio128.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "MP3 128 2",
+        "url": "https://icecast7.play.cz/casradio128.mp3",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  {
+    "name": "Rozk Zone",
+    "streams": [
+      {
+        "name": "MP3 128",
+        "url": "https://icecast5.play.cz/rockzone128.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "MP3 128 2",
+        "url": "https://icecast2.play.cz/rockzone128.mp3",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  {
+    "name": "Color Music Radio",
+    "streams": [
+      {
+        "name": "Default MP3",
+        "url": "https://icecast6.play.cz/color192.mp3",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  {
+    "name": "Radio 1",
+    "streams": [
+      {
+        "name": "Default",
+        "url": "https://live.radio1.pf:8443/radio1",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  {
+    "name": "Blaník",
+    "streams": [
+      {
+        "name": "MP3 128",
+        "url": "https://21633.live.streamtheworld.com/RADIO_BLANIKCZ_128.mp3",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  {
+    "name": "Humor",
+    "streams": [
+      {
+        "name": "MP3 128",
+        "url": "https://29083.live.streamtheworld.com/RADIO_HUMOR_128.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "MP3 128 2",
+        "url": "https://mp3stream4.abradio.cz/humor128.mp3",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  {
+    "name": "Oldies",
+    "streams": [
+      {
+        "name": "MP3 128",
+        "url": "https://ice.radia.cz/oldiesradio128.mp3",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  {
+    "name": "Hey Radio",
+    "streams": [
+      {
+        "name": "MP3 128",
+        "url": "https://icecast3.play.cz/hey-radio128.mp3",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  {
+    "name": "ZUN",
+    "streams": [
+      {
+        "name": "MP3",
+        "url": "https://icecast9.play.cz/zun192.mp3",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  {
+    "name": "Radio Relax",
+    "streams": [
+      {
+        "name": "MP3",
+        "url": "https://icecast7.play.cz/relax128.mp3",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Regina BB",
+    "streams": [
+      {
+        "name": "MP3 128",
+        "url": "https://live.slovakradio.sk:8443/Regina_BB_128.mp3",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  {
+    "name": "ČRo 2 - Praha",
+    "streams": [
+      {
+        "name": "MP3 128",
+        "url": "https://icecast6.play.cz/cro2-128.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "MP3 128 2",
+        "url": "https://icecast7.play.cz:8443/cro2-128.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "OGG High",
+        "url": "https://amp.cesnet.cz:8443/cro2.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "OGG 256k",
+        "url": "https://amp.cesnet.cz:8443/cro2-256.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "Z-OGG High",
+        "url": "https://amp.cesnet.cz:8443/z-cro2.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "Z-OGG 256k",
+        "url": "https://amp.cesnet.cz:8443/z-cro2-256.ogg",
+        "mime": "audio/ogg"
+      }
+    ]
+  },
+  {
+    "name": "ČRo 3 - Vltava",
+    "streams": [
+      {
+        "name": "MP3 128",
+        "url": "https://icecast5.play.cz/cro3-128.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "Z-OGG",
+        "url": "https://amp.cesnet.cz:8443/z-cro3.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "OGG High",
+        "url": "https://amp.cesnet.cz:8443/cro3.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "OGG 256k",
+        "url": "https://amp.cesnet.cz:8443/cro3-256.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "FLAC Stream",
+        "url": "https://amp.cesnet.cz:8443/cro3.flac",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "Z-OGG 256k",
+        "url": "https://amp.cesnet.cz:8443/z-cro3-256.ogg",
+        "mime": "audio/ogg"
+      }
+    ]
+  },
+  {
+    "name": "ČRo Radio Wave",
+    "streams": [
+      {
+        "name": "MP3 128",
+        "url": "https://rozhlas.stream/wave_mp3_128.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "OGG High",
+        "url": "https://amp.cesnet.cz:8443/cro-radio-wave.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "OGG 256k",
+        "url": "https://amp.cesnet.cz:8443/cro-radio-wave-256.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "FLAC Stream",
+        "url": "https://amp.cesnet.cz:8443/cro-radio-wave.flac",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "Z-OGG High",
+        "url": "https://amp.cesnet.cz:8443/z-cro-radio-wave.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "Z-OGG 256k",
+        "url": "https://amp.cesnet.cz:8443/z-cro-radio-wave-256.ogg",
+        "mime": "audio/ogg"
+      }
+    ]
+  },
+  {
+    "name": "ČRo Radio Junior",
+    "streams": [
+      {
+        "name": "MP3",
+        "url": "https://rozhlas.stream/radio_junior.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "Z-OGG",
+        "url": "https://amp.cesnet.cz:8443/z-cro-radio-junior.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "OGG High",
+        "url": "https://amp.cesnet.cz:8443/cro-radio-junior.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "OGG 256k",
+        "url": "https://amp.cesnet.cz:8443/cro-radio-junior-256.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "Z-OGG 256k",
+        "url": "https://amp.cesnet.cz:8443/z-cro-radio-junior-256.ogg",
+        "mime": "audio/ogg"
+      }
+    ]
+  },
+  {
+    "name": "ČRo Jazz",
+    "streams": [
+      {
+        "name": "MP3",
+        "url": "https://rozhlas.stream/jazz.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "Z-OGG",
+        "url": "https://amp.cesnet.cz:8443/z-cro-jazz.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "OGG High",
+        "url": "https://amp.cesnet.cz:8443/cro-jazz.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "OGG 256k",
+        "url": "https://amp.cesnet.cz:8443/cro-jazz-256.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "FLAC Stream",
+        "url": "https://amp.cesnet.cz:8443/cro-jazz.flac",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "Z-OGG 256k",
+        "url": "https://amp.cesnet.cz:8443/z-cro-jazz-256.ogg",
+        "mime": "audio/ogg"
+      }
+    ]
+  },
+  {
+    "name": "ČRo D-dur",
+    "streams": [
+      {
+        "name": "MP3",
+        "url": "https://rozhlas.stream/ddur.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "name": "Z-OGG",
+        "url": "https://amp.cesnet.cz:8443/z-cro-d-dur.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "OGG High",
+        "url": "https://amp.cesnet.cz:8443/cro-d-dur.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "OGG 256k",
+        "url": "https://amp.cesnet.cz:8443/cro-d-dur-256.ogg",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "FLAC Stream",
+        "url": "https://amp.cesnet.cz:8443/cro-d-dur.flac",
+        "mime": "audio/ogg"
+      },
+      {
+        "name": "Z-OGG 256k",
+        "url": "https://amp.cesnet.cz:8443/z-cro-d-dur-256.ogg",
+        "mime": "audio/ogg"
+      }
+    ]
+  },
+  {
+    "name": "ČRo - Radiožurnál sport",
+    "streams": [
+      {
+        "name": "AAC 192",
+        "url": "https://rozhlas.stream/radiozurnal_sport_high.aac",
+        "mime": "audio/aac"
+      }
+    ]
+  },
+  {
+    "name": "Radio Prague International",
+    "streams": [
+      {
+        "name": "MP3 128",
+        "url": "https://rozhlas.stream/cro7_mp3_128.mp3",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  {
+    "name": "Classic Praha",
+    "streams": [
+      {
+        "name": "MP3 128",
+        "url": "https://icecast8.play.cz/classic128.mp3",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  {
+    "name": "BBW World Service",
+    "streams": [
+      {
+        "name": "MP3",
+        "url": "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service",
+        "mime": "audio/mpeg"
+      }
+    ]
+  }
+]
